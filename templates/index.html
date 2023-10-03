@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Map Simulator</title>
+</head>
+<body>
+    <h1>Radio Map Simulator</h1>
+    <form action="/generate_radio_map" method="GET" onsubmit="return submitForm(event)">
+
+        <label for="emitters">Number of emitters:</label>
+        <input type="number" id="emitters" name="emitters" value="2"><br><br>
+
+        <label for="shadow-variance">Shadow variance:</label>
+        <input type="number" id="shadow-variance" name="shadow-variance" value="4.0"><br><br>
+
+        <label for="decorrelation-distance">Decorrelation distance:</label>
+        <input type="number" id="decorrelation-distance" name="decorrelation-distance" value="100"><br><br>
+
+        <label for="snr">Signal-to-noise ratio:</label>
+        <input type="number" id="snr" name="snr" value="0"><br><br>
+
+        <label for="space-x">Dimension on X-axis:</label>
+        <input type="number" id="space-x" name="space-x" value="51"><br><br>
+
+        <label for="space-y">Dimension on Y-axis:</label>
+        <input type="number" id="space-y" name="space-y" value="51"><br><br>
+
+        <label for="bandwidth-length">Frequency dimension Z-axis:</label>
+        <input type="number" id="bandwidth-length" name="bandwidth-length" value="64"><br><br>
+
+        <label for="psd-basis">Basis function for PSD generation:</label>
+        <select id="psd-basis" name="psd-basis">
+            <option value="g">Gaussian</option>
+            <option value="s">Sinc</option>
+        </select><br><br>
+
+        <label for="visualize-bin">Frequency bin to visualize:</label>
+        <input type="number" id="visualize-bin" name="visualize-bin" value="25"><br><br>
+
+        <input type="submit" value="Generate">
+    </form>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // prevent the default form submission behavior
+            var form = event.target; // get the form element
+            var submitButton = form.querySelector('input[type="submit"]'); // get the submit button element
+            submitButton.disabled = true; // disable the submit button to prevent multiple submissions
+            form.submit(); // submit the form
+        }
+    </script>
+
+</body>
+</html>

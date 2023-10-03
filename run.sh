@@ -1,0 +1,11 @@
+python generate_radio_map.py \
+  --emitters 6 \
+  --shadow-variance 4 \
+  --decorrelation-distance 100 \
+  --snr 0 \
+  --space-x 100 \
+  --space-y 100 \
+  --bandwidth-length 64 \
+  --psd-basis 'g' \
+  --save-file 'test.npz' \
+  --visualize 'True' 
