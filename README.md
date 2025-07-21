@@ -1,5 +1,21 @@
 # Radio Map Simulator
 
+## Citation
+
+If you use this work, please cite the paper using the following BibTeX entry:
+
+```bibtex
+@article{timilsina2023quantized,
+  title={Quantized radio map estimation using tensor and deep generative models},
+  author={Timilsina, Subash and Shrestha, Sagar and Fu, Xiao},
+  journal={IEEE Transactions on Signal Processing},
+  volume={72},
+  pages={173--189},
+  year={2023},
+  publisher={IEEE}
+}
+```
+
 
 ## Installation:
 The code was built with the `python3.9`.
